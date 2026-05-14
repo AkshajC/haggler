@@ -4,8 +4,6 @@ These tests exist mainly to catch breaking changes to the shared schemas
 that would silently corrupt data between scout and negotiator.
 """
 
-from datetime import UTC, datetime
-
 import pytest
 from pydantic import ValidationError
 

@@ -6,13 +6,13 @@ one of these types.
 """
 
 from datetime import datetime
-from enum import Enum
+from enum import StrEnum
 from typing import Any
 
 from pydantic import BaseModel, ConfigDict, Field, HttpUrl
 
 
-class Platform(str, Enum):
+class Platform(StrEnum):
     """Marketplace platforms we support."""
 
     CRAIGSLIST = "craigslist"
@@ -20,7 +20,7 @@ class Platform(str, Enum):
     FACEBOOK = "facebook"
 
 
-class Condition(str, Enum):
+class Condition(StrEnum):
     """Item condition, normalized across platforms."""
 
     NEW = "new"
@@ -31,7 +31,7 @@ class Condition(str, Enum):
     UNKNOWN = "unknown"
 
 
-class NegotiationState(str, Enum):
+class NegotiationState(StrEnum):
     """State machine values for a single conversation."""
 
     PENDING = "pending"           # not yet contacted
@@ -44,7 +44,7 @@ class NegotiationState(str, Enum):
     WALKED_AWAY = "walked_away"   # we decided to stop
 
 
-class NegotiationAction(str, Enum):
+class NegotiationAction(StrEnum):
     """Decisions the negotiator can make at each turn."""
 
     SEND_OPENING = "send_opening"
