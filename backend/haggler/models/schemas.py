@@ -34,14 +34,14 @@ class Condition(StrEnum):
 class NegotiationState(StrEnum):
     """State machine values for a single conversation."""
 
-    PENDING = "pending"           # not yet contacted
-    OPENING = "opening"           # initial message sent, waiting on reply
-    PROBING = "probing"           # asking clarifying questions
-    OFFERING = "offering"         # made an offer, waiting on response
-    COUNTERING = "countering"     # received counter, deciding
-    CLOSED_WON = "closed_won"     # deal accepted
-    CLOSED_LOST = "closed_lost"   # seller rejected / ghosted
-    WALKED_AWAY = "walked_away"   # we decided to stop
+    PENDING = "pending"  # not yet contacted
+    OPENING = "opening"  # initial message sent, waiting on reply
+    PROBING = "probing"  # asking clarifying questions
+    OFFERING = "offering"  # made an offer, waiting on response
+    COUNTERING = "countering"  # received counter, deciding
+    CLOSED_WON = "closed_won"  # deal accepted
+    CLOSED_LOST = "closed_lost"  # seller rejected / ghosted
+    WALKED_AWAY = "walked_away"  # we decided to stop
 
 
 class NegotiationAction(StrEnum):

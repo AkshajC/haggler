@@ -23,9 +23,7 @@ def test_search_criteria_target_defaults_to_70_percent() -> None:
 
 
 def test_search_criteria_respects_explicit_target() -> None:
-    criteria = SearchCriteria(
-        query="couch", max_price=400, location="94583", target_price=300
-    )
+    criteria = SearchCriteria(query="couch", max_price=400, location="94583", target_price=300)
     assert criteria.effective_target() == 300
 
 
