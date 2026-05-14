@@ -22,6 +22,9 @@ class Settings(BaseSettings):
     # Database
     database_url: str = "sqlite+aiosqlite:///./haggler.db"
 
+    # Apify (Craigslist + Facebook scouts)
+    apify_api_key: str | None = None
+
     # eBay
     ebay_app_id: str | None = None
     ebay_cert_id: str | None = None
@@ -48,4 +51,4 @@ class Settings(BaseSettings):
 @lru_cache
 def get_settings() -> Settings:
     """Cached settings singleton."""
-    return Settings()  # type: ignore[call-arg]
+    return Settings()
